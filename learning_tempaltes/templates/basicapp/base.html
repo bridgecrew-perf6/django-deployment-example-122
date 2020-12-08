@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navnar-default navbar-static-top">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a  class="navbar-brand" href="{% url "index"%}">BRAD</a></li>
+            <li><a class="navbar-link" href="{% url "admin:index"%}">ADMIN</a></li>
+            <li><a class="navbar-link" href="{% url "basicapp:other"%}">Other</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+      {% block body_block %}
+      <!--anything will be in this block th rest will be inherited -->
+      {% endblock %}
+
+    </div>
+
+  </body>
+</html>
